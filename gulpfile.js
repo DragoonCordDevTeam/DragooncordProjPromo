@@ -98,7 +98,7 @@ function watch() {
 	gulp.watch(path.src.plugins, plugins);
 };
 
-exports.default = gulp.parallel(
+exports.default = gulp.series(clean, gulp.parallel(
 	html,
 	js,
 	scss,
@@ -112,3 +112,14 @@ exports.default = gulp.parallel(
 			}
 		});
 	})
+);
+
+exports.build = gulp.series(clean, gulp.parallel(
+	html,
+	js,
+	scss,
+	images,
+	plugins,
+	others
+	)
+)
