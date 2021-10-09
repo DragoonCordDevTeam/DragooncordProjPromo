@@ -130,7 +130,6 @@ label {
  *  CSS Helper Class
  */
 .clear {
-
   &:before,
   &:after {
     content: " ";
@@ -161,6 +160,17 @@ label {
   height: 100%;
 }
 
+.bg-artwork {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 .relative {
   position: relative;
 }
@@ -186,6 +196,14 @@ label {
 
 .flex-middle {
   @include align-items(center);
+}
+
+.justify-center {
+  @include justify-content(center)
+}
+
+.flex-column {
+  @include flex-direction(column)
 }
 
 .space-between {
