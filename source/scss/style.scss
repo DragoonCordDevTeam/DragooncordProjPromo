@@ -680,199 +680,28 @@ FACEBOOK: https://www.facebook.com/themefisher
 // contact
 
 .contact-block {
-  margin-bottom: 30px;
+  padding: 20px 50px;
+  width: 100%;
+  font-size: 10pt;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  transform: skew(15deg, 0deg);
+  background: rgba(0, 0, 0, 0.5);
+  border: 5px solid #CFCBC5;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  .media-left {
-    font-size: 40px;
-    max-width: 50px;
-    min-width: 50px;
-    padding-right: 0;
-    text-align: center;
-  }
-
-  .media-body {
-    padding-left: 30px;
-  }
-
-  h4 {
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-
-  p {
-    font-weight: 400;
-    font-size: 15px;
+  .content-text {
+    transform: skew(-15deg, 0deg);
   }
 }
 
-.contact-social {
-  list-style: outside none none;
-  margin: 0;
-  padding: 0;
+.join-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
 
-  li {
-    display: inline-block;
-    position: relative;
-    width: 43px;
-
-    a {
-      color: $light;
-      display: block;
-      font-size: 14px;
-      height: 50px;
-      left: 50%;
-      line-height: 50px;
-      position: absolute;
-      text-align: center;
-      top: 50%;
-      width: 43px;
-      @include transform(translate(-50%, -50%));
-    }
-
-    &:hover {
-      span {
-        background-color: $primary-color;
-
-        &::before {
-          border-bottom-color: $primary-color;
-        }
-
-        &::after {
-          border-top-color: $primary-color;
-        }
-      }
-    }
-  }
-}
-
-.contact-social-hex {
-  display: block;
-  position: relative;
-  width: 43px;
-  height: 24.83px;
-  background-color: #1e2530;
-  margin: 12.41px 0;
-  @include transition(all 0.3s ease 0s);
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    border-left: 21.5px solid transparent;
-    border-right: 21.5px solid transparent;
-    @include transition(all 0.3s ease 0s);
-  }
-
-  &::before {
-    bottom: 100%;
-    border-bottom: 12.41px solid #1e2530;
-  }
-
-  &::after {
-    top: 100%;
-    width: 0;
-    border-top: 12.41px solid #1e2530;
-  }
-
-  &:hover {
-    &::after {
-      border-bottom-color: $primary-color;
-    }
-
-    &::before {
-      border-top-color: $primary-color;
-    }
-  }
-}
-
-
-.contact-form {
-  .input-field {
-    margin-bottom: 10px;
-
-    &.name {
-      margin-right: 5px;
-    }
-
-    &.email {
-      margin-left: 5px;
-    }
-
-    label.error {
-      color: #ff0000;
-      font-size: 13px;
-      margin: 0;
-    }
-  }
-
-  .input-icon {
-    background-color: $light-dark;
-    border-radius: 3px 0 0 3px;
-    border-right: 1px solid rgba($light, 0.2);
-    line-height: 48px;
-    min-width: 53px;
-    text-align: center;
-    left: 0;
-    line-height: 48px;
-    min-width: 53px;
-    position: absolute;
-    top: 0;
-  }
-
-  .form-control {
-    background-color: $light-dark;
-    color: #bcbcbc;
-    border: 0 none;
-    border-radius: 3px;
-    height: 48px;
-    padding-left: 70px;
-    width: 100%;
-    font-family: $open-sans;
-
-    &:focus {
-      box-shadow: none;
-      color: #fff;
-    }
-  }
-
-  textarea.form-control {
-    border-radius: 3px;
-    height: 120px;
-    padding: 15px 10px 15px 70px;
-  }
-
-  .message {
-    .input-icon {
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-  }
-}
-
-
-.msg-success,
-.msg-failed {
-  display: none;
-  margin-top: 15px;
-}
-
-.msg-success {
-  color: $primary-color;
-}
-
-.pt-table.desktop-768 .pt-tablecell {
-  padding-bottom: 110px;
-  padding-top: 60px;
-
-  .page-nav {
-    bottom: 40px;
+  img {
+    object-fit: contain;
   }
 }
 
@@ -885,7 +714,7 @@ FACEBOOK: https://www.facebook.com/themefisher
   border-right: 0;
   color: #333;
   height: 150px;
-  right: 0px;
+  right: 0;
   position: fixed;
   top: 100px;
   width: 260px;
