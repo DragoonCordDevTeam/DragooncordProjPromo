@@ -208,49 +208,8 @@ FACEBOOK: https://www.facebook.com/themefisher
   line-height: 1.5;
 }
 
-.progress {
-  background-color: $light-dark;
-  border-radius: 2px;
-  height: auto;
-  min-height: 45px;
-  @include align-items(center);
-  @include flexbox();
-
-  & > div {
-    color: $light;
-    font-family: $open-sans;
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-
-  .skill-name {
-    border-right: 2px solid #2e333a;
-    min-width: 160px;
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-  .skill-bar {
-    background-color: #07080b;
-    border-radius: 15px;
-    margin: 0 15px;
-    @include flex-grow(1);
-  }
-
-  .bar {
-    background-color: $primary-color;
-    border-radius: 10px;
-    height: 8px;
-    width: 0;
-  }
-
-  .skill-lavel {
-    border-left: 2px solid #2e333a;
-    min-width: 70px;
-    text-align: center;
-    @include align-items(flex-end);
-    @include transition(all 0.3s ease 0s)
-  }
+.margin-bottom-about {
+  margin-bottom: 100px;
 }
 
 // Works

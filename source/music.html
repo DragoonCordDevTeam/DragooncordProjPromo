@@ -1,0 +1,111 @@
+@@include('header.htm')
+
+<main class="site-wrapper">
+	<div class="pt-table">
+		<div class="pt-tablecell page-music relative"
+		     style="background-image: url('images/banner.jpg');
+         background-position: top center;
+         background-size: cover;
+         background-repeat: no-repeat;">
+			<!-- .close -->
+			<a href="./" class="page-close"><i class="tf-ion-close"></i></a>
+			<!-- /.close -->
+			<div class="bg-artwork"
+			     style="position: absolute;
+			     background-image: url('images/music-bg.png');
+                 background-position: bottom center;
+                 background-size: contain;
+                 background-repeat: no-repeat;
+                 bottom: 0"
+			></div>
+			<div class="bg-artwork"
+			     style="position: absolute;
+			     background-color: rgba(0,0,0,0.5);
+                 background-size: cover;
+                 background-repeat: no-repeat;"
+			></div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+						<div class="flex flex-column flex-middle justify-center page-title text-center">
+							<h2>music <span class="primary">board</span> <span class="flex justify-center title-bg">music</span>
+							</h2>
+							<p>A collection of the dragoon community’s music pieces for Selen Tatsuki!</p>
+						</div>
+					</div>
+				</div> <!-- /.row -->
+				<div class="row">
+					<div class="col-xs-12 col-md-3 col-lg-offset-1 col-lg-2">
+						<a href="https://www.youtube.com/channel/UCp3C7vYzqfETiYUl8GMlMHg" target="_blank"
+						   id="composer-social">
+							<img class="white-border composer-image" id="composer-pfp" src="images/tachibana.jpg"
+							     alt="composer"/>
+						</a>
+						<div class="music-list">
+							<div class="music-list-heading white-border">Music List</div>
+							<div class="music-item white-border" data-src="https://www.youtube.com/embed/eAieUD8Zr88"
+							     data-image-src="images/tachibana.jpg"
+							     data-link="https://www.youtube.com/channel/UCp3C7vYzqfETiYUl8GMlMHg">
+								Lunar Sky
+							</div>
+							<div class="music-item white-border" data-src="https://www.youtube.com/embed/GpeLK_IUkvI"
+							     data-image-src="images/tachibana.jpg"
+							     data-link="https://www.youtube.com/channel/UCp3C7vYzqfETiYUl8GMlMHg">
+								Funky BGM
+							</div>
+							<div class="music-item white-border" data-src="https://www.youtube.com/embed/ae4vOeZodlw"
+							     data-image-src="images/anizan.jpg"
+							     data-link="https://twitter.com/AnizanHuman">
+								Selen Victorious
+							</div>
+							<div class="music-item white-border" data-src="https://www.youtube.com/embed/eAieUD8Zr88"
+							     data-image-src="images/tachibana.jpg"
+							     data-link="https://www.youtube.com/channel/UCp3C7vYzqfETiYUl8GMlMHg">
+								Lunar Sky
+							</div>
+							<div class="music-item white-border" data-src="https://www.youtube.com/embed/GpeLK_IUkvI"
+							     data-image-src="images/tachibana.jpg"
+							     data-link="https://www.youtube.com/channel/UCp3C7vYzqfETiYUl8GMlMHg">
+								Funky BGM
+							</div>
+							<div class="music-item white-border" data-src="https://www.youtube.com/embed/ae4vOeZodlw"
+							     data-image-src="images/anizan.jpg"
+							     data-link="https://twitter.com/AnizanHuman">
+								Selen Victorious
+							</div>
+							<div class="music-item white-border" data-src="https://www.youtube.com/embed/eAieUD8Zr88"
+							     data-image-src="images/tachibana.jpg"
+							     data-link="https://www.youtube.com/channel/UCp3C7vYzqfETiYUl8GMlMHg">
+								Lunar Sky
+							</div>
+						</div>
+					</div> <!-- /.col- -->
+					<div class="col-xs-12 col-md-8 col-lg-7">
+						<div class="song-title-block">
+							<div class="song-title"></div>
+							<div class="song-title" style="width: 100%;">
+								<div class="song-title-text music-title-interactive">Lunar Sky</div>
+							</div>
+							<div class="song-title"></div>
+						</div>
+						<div class="frame-container">
+							<iframe id="YTPlayer" class="white-border" width="560" height="315"
+							        src="https://www.youtube.com/embed/eAieUD8Zr88"
+							        title="YouTube video player" frameborder="0"
+							        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							        allowfullscreen></iframe>
+						</div>
+						<div class="margin-bottom-music"></div>
+					</div>
+				</div> <!-- /.row -->
+			</div> <!-- /.container -->
+
+			@@include('blocks/page-nav.htm',{"prev":"index.html", "next":"about.html"})
+			<!-- /.container -->
+
+		</div> <!-- /.pt-tablecell -->
+	</div> <!-- /.pt-table -->
+</main> <!-- /.site-wrapper -->
+
+@@include('footer.htm')
