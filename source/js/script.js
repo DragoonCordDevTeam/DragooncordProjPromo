@@ -1,5 +1,12 @@
-(function($) {
+(function ($) {
 	"use strict";
+
+	$('.music-item').on('click', function () {
+		$('#YTPlayer').attr('src', $(this).attr("data-src"));
+		$('.music-title-interactive').text($(this).text());
+		$('#composer-social').attr('href', $(this).attr('data-link'));
+		$('#composer-pfp').attr('src', $(this).attr('data-image-src'));
+	});
 
 	$(".history-scroller").niceScroll({
 		cursorwidth: "10px",
@@ -17,7 +24,7 @@
 		speed: 300,
 		arrows: false,
 		adaptiveHeight: true,
-		
+
 		slidesToShow: 2,
 		slidesToScroll: 1,
 		responsive: [
@@ -41,13 +48,13 @@
 			}
 		]
 	});
-	
+
 	animatedProgressBar();
 	windowHieght();
 	previewPannel();
 
-	function animatedProgressBar () {
-		$(".progress").each(function() {
+	function animatedProgressBar() {
+		$(".progress").each(function () {
 			var skillValue = $(this).find(".skill-lavel").attr("data-skill-value");
 			$(this).find(".bar").animate({
 				width: skillValue
@@ -57,8 +64,8 @@
 		});
 	}
 
-	function windowHieght(){
-		if ( $(window).height() <=768 ) {
+	function windowHieght() {
+		if ($(window).height() <= 768) {
 			$(".pt-table").addClass("desktop-768");
 		} else {
 			$(".pt-table").removeClass("desktop-768");
@@ -81,13 +88,13 @@
 			}
 		});
 
-		$(".filter a").on("click", function(){
+		$(".filter a").on("click", function () {
 			$(".filter a").removeClass("active");
 			$(this).addClass("active");
 			var selector = $(this).attr("data-filter");
 			$(".isotope-gutter").isotope({
-					filter: selector,
-					animationOptions: {
+				filter: selector,
+				animationOptions: {
 					duration: 750,
 					easing: "linear",
 					queue: false
@@ -101,22 +108,22 @@
 		Preview Pannel
 	-=-=-=-=-=-=-=-=-=--=-=-=-=-=-*/
 	function previewPannel() {
-		$(".switcher-trigger").on("click", function() {
+		$(".switcher-trigger").on("click", function () {
 			$(".preview-wrapper").toggleClass("extend");
 			return false;
 		});
-		if ($(window).width() < 768 ) {            
+		if ($(window).width() < 768) {
 			//$(".preview-wrapper").removeClass("extend");
 		}
-		$(".color-options li").on("click", function(){			
+		$(".color-options li").on("click", function () {
 			$("#color-changer").attr({
-				"href":"css/colors/"+$(this).attr("data-color")+".css"
+				"href": "css/colors/" + $(this).attr("data-color") + ".css"
 			});
 			return false;
 		});
 	}
-	
-	$(window).on("load", function() {
+
+	$(window).on("load", function () {
 		isotopeMasonry();
 
 		$(".preloader").addClass("active");

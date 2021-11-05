@@ -1,21 +1,98 @@
-
 /*------------------------------------------------
     Welcome Page
 -------------------------------------------------*/
 
-.author-image-large {
-    position: absolute;
-    right: 0;
-    top: 0;
-    img {
-        @include calc(height, "100vh - 4px");
-    }
+@import "source/scss/variables";
+
+.page-music {
+  font-family: "Open Sans", sans-serif;
 }
 
-// .hexagon-item {
-// 	a {
-// 		path {
-// 			fill: #59C4B4;
-// 		}
-// 	}
-// }
+.white-border {
+  border: 3px solid white;
+}
+
+.song-title-block {
+  width: 100%;
+  display: flex;
+  column-gap: 10px;
+  padding: 0 30px;
+  margin-bottom: 50px;
+}
+
+.song-title {
+  padding: 15px 30px;
+  transform: skew(45deg, 0deg);
+  background: rgba(0, 0, 0, 0.5);
+  border: 5px solid #CFCBC5;
+
+  .song-title-text {
+    transform: skew(-45deg, 0deg);
+    text-align: center;
+    font-size: 24pt;
+  }
+}
+
+.frame-container {
+  display: flex;
+  justify-content: center;
+}
+
+.composer-image {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.music-list {
+  overflow-y: scroll;
+  padding-right: 10px;
+  height: 250px;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: $hexagon-color;
+    transition-duration: 1s;
+    border-radius: 9999px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $hexagon-color;
+    border-radius: 9999px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary-color;
+    border-radius: 9999px;
+  }
+}
+
+.music-lis-item {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+
+.music-item {
+  @extend .music-lis-item;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: ease-in-out 300ms;
+
+  &:hover {
+    background: rgb(0, 0, 0);
+    border-color: $primary-color;
+  }
+}
+
+.music-list-heading {
+  @extend .music-lis-item;
+  padding: 0;
+  cursor: default;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.margin-bottom-music {
+  margin-bottom: 100px;
+}
