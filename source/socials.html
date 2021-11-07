@@ -1,0 +1,82 @@
+@@include('header.htm')
+
+<main class="site-wrapper">
+	<div class="pt-table">
+		<div class="pt-tablecell page-music relative"
+		     style="background-image: url('images/banner.jpg');
+         background-position: top center;
+         background-size: cover;
+         background-repeat: no-repeat;">
+			<!-- .close -->
+			<a href="./" class="page-close"><i class="tf-ion-close"></i></a>
+			<!-- /.close -->
+			<div class="bg-artwork"
+			     style="position: absolute;
+			     background-image: url('images/socials-bg.png');
+                 background-position: bottom center;
+                 background-size: contain;
+                 background-repeat: no-repeat;
+                 bottom: 0"
+			></div>
+			<div class="bg-artwork"
+			     style="position: absolute;
+			     background-color: rgba(0,0,0,0.5);
+                 background-size: cover;
+                 background-repeat: no-repeat;"
+			></div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+						<div class="flex flex-column flex-middle justify-center page-title text-center">
+							<h2>SELEN’S <span class="primary">SOCIALS</span> <span class="flex justify-center title-bg">SOCIALS</span>
+							</h2>
+							<p style="font-size: 10pt;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+								pretium laoreet placerat.
+								Morbi tristique ligula id turpis commodo,
+								eu placerat metus rhoncus. Aenean vel molestie lacus. Cras dapibus massa massa, a dictum
+								nunc imperdiet quis.
+								In lobortis mauris in volutpat accumsan. Phasellus at nisl lorem. In non pharetra neque,
+								non pretium ex.</p>
+						</div>
+					</div>
+				</div> <!-- /.row -->
+				<div class="row">
+					<div class="col-xs-12 col-md-3 col-lg-offset-1 col-lg-2" style="padding-top: 40px;">
+						<div class="play-button">
+							<img src="images/Polygon 1.png" alt="polygon"/>
+							<i class="tf-ion-play play-icon"></i>
+						</div>
+						<div class="play-button">
+							<img src="images/Polygon 2.png" alt="polygon"/>
+							<i class="tf-ion-play play-icon"></i>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-8 col-lg-7">
+						<div class="socials-row">
+							<img class="socials-logo" src="images/tw-logo.svg" alt="twitter">
+							<a href="https://twitter.com/selen_tatsuki" target="_blank">@Selen_Tatsuki</a>
+							<img class="socials-logo" src="images/yt-logo.svg" alt="twitter">
+							<a href="https://www.youtube.com/channel/UCV1xUwfM2v2oBtT3JNvic3w" target="_blank">Selen
+								Tatsuki 【[NIJISANJI EN】</a>
+						</div>
+						<div class="frame-container">
+							<iframe id="YTPlayer" class="white-border" width="900" height="350"
+							        src="https://www.youtube.com/embed/eAieUD8Zr88"
+							        title="YouTube video player" frameborder="0"
+							        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							        allowfullscreen></iframe>
+						</div>
+						<div class="margin-bottom-socials"></div>
+					</div>
+				</div> <!-- /.row -->
+			</div> <!-- /.container -->
+
+			@@include('blocks/page-nav.htm',{"prev":"works.html", "next":"contact.html"})
+			<!-- /.container -->
+
+		</div> <!-- /.pt-tablecell -->
+	</div> <!-- /.pt-table -->
+</main> <!-- /.site-wrapper -->
+
+@@include('footer.htm')
