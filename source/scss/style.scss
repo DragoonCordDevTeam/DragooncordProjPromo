@@ -462,177 +462,49 @@ FACEBOOK: https://www.facebook.com/themefisher
 // testimonials
 //--------------------------------------
 
-.testimonials {
-  .item {
-    padding-top: 33px;
+.socials-row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  margin-bottom: 10px;
+  font-size: 10pt;
+}
+
+.socials-logo {
+  height: 25px;
+  margin: 0 10px 0 15px;
+  transform: translateY(5px);
+}
+
+.play-button {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 20px;
+
+  img {
+    width: 150px;
   }
 
-  .thumb {
-    float: left;
-    margin-top: -20px;
-
-    img {
-      width: auto;
-    }
-
-    @media only screen and (max-width: 991px) {
-      float: none;
-      margin-top: 0;
-      margin: auto;
-    }
+  .play-icon {
+    position: absolute;
+    top: 50px;
+    left: 55px;
+    z-index: 99;
+    font-size: 80px;
+    opacity: 0.4;
+    transition: ease-in-out 300ms;
   }
 
-  .text {
-    border: 1px solid #cecece;
-    font-size: 14px;
-    font-style: italic;
-    line-height: 24px;
-    margin-left: 50px;
-    padding: 27px 30px 29px 142px;
-
-    @media only screen and (max-width: 991px) {
-      padding: 29px 30px 29px 30px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-  }
-
-  figcaption {
-    font-family: $open-sans;
-    font-size: 16px;
-    font-weight: 700;
-    padding-top: 15px;
-    text-align: center;
-  }
-
-  h4 {
-    font-family: $open-sans;
-    font-weight: 700;
-  }
-
-  span {
-    font-size: 12px;
-  }
-
-  .slick-slide {
-    margin: 0 15px;
-
-    &:focus {
-      outline: 0;
-    }
-
-    &:nth-child(2n) {
-      .thumb {
-        float: right;
-
-        @media only screen and (max-width: 991px) {
-          float: none;
-        }
-      }
-
-      .text {
-        margin-left: 0;
-        margin-right: 50px;
-        padding: 27px 142px 29px 30px;
-
-        @media only screen and (max-width: 991px) {
-          padding: 29px 30px 29px 30px;
-          margin-right: 0;
-        }
-      }
-    }
-  }
-
-  .slick-dots {
-    text-align: center;
-
-    button {
-      border: 2px solid $light-dark;
-      border-radius: 15px;
-      display: inline-block;
-      height: 11px;
-      margin: 0 4px;
-      width: 11px;
-      @include transition(all 0.3s ease 0s);
-
-      &:before {
-        display: none;
-      }
-    }
-
-    .slick-active button {
-      border-color: $primary-color;
+  &:hover {
+    .play-icon {
+      opacity: 0.9;
     }
   }
 }
 
-.tm-hex {
-  position: relative;
-  width: 170px;
-  height: 98.15px;
-  margin: 49.07px 0;
-  background-size: auto 182.4427px;
-  background-position: center;
-  border-left: solid 6px $title-color;
-  border-right: solid 6px $title-color;
-
-  @media only screen and (max-width: 991px) {
-    margin: 49.07px auto;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 3.4641px;
-    left: 0;
-    width: 158.0000px;
-    height: 91.2213px;
-    z-index: 2;
-    background: inherit;
-  }
-
-  .hexTop,
-  .hexBottom {
-    position: absolute;
-    z-index: 1;
-    width: 120.21px;
-    height: 120.21px;
-    overflow: hidden;
-    background: inherit;
-    left: 18.90px;
-    @include transform(scaleY(0.5774) rotate(-45deg));
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: 158.0000px;
-      height: 91.22134253196087px;
-      background: inherit;
-      @include transform-origin(0 0);
-      @include transform(rotate(45deg) scaleY(1.7321) translateY(-45.6107px));
-    }
-  }
-
-  .hexTop {
-    top: -60.1041px;
-    border-top: solid 8.4853px $title-color;;
-    border-right: solid 8.4853px $title-color;;
-
-    &::after {
-      background-position: center top;
-    }
-  }
-
-  .hexBottom {
-    bottom: -60.1041px;
-    border-bottom: solid 8.4853px $title-color;;
-    border-left: solid 8.4853px $title-color;;
-
-    &::after {
-      background-position: center bottom;
-    }
-  }
+.margin-bottom-socials {
+  margin-bottom: 160px;
 }
 
 
