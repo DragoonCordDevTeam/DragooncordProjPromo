@@ -292,99 +292,48 @@ FACEBOOK: https://www.facebook.com/themefisher
 
 // history/ resume
 
-.history-block {
-  background-color: $light-dark;
-  position: relative;
-
-  .section-title {
-    background-color: $light-dark;
-    border-bottom: 1px solid #293342;
-    left: 0;
-    margin-bottom: 0;
-    padding: 15px 34px 14px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1;
-  }
-}
-
-.nicescroll-rails {
-  z-index: 2;
-}
-
-.history-scroller {
-  padding-top: 82px;
-  max-height: 377px;
-}
-
-.history-item {
-  display: table;
-  font-family: $open-sans;
-  padding-left: 32px;
-  margin-bottom: 20px;
+.quote-item {
+  display: flex;
   width: 100%;
+  align-items: center;
+  margin-bottom: 20px;
 
-  & > * {
-    display: table-cell;
-    vertical-align: middle;
+  .play-button {
+    z-index: 999;
+    margin-bottom: 0;
   }
 
-  .history-icon {
-    padding-right: 25px;
-    position: relative;
-    width: 66px;
+  .quote-block {
+    display: flex;
+    align-items: center;
+    padding: 10px 25px 10px 85px;
+    width: 100%;
+    font-size: 10pt;
+    line-height: 1.5;
+    margin: 10px 0 10px -80px;
+    transform: skew(10deg, 0deg);
+    background: rgba(0, 0, 0, 0.5);
+    border: 5px solid #CFCBC5;
+    min-height: 150px;
 
-    i {
-      font-size: 18px;
-      position: absolute;
-      top: 50%;
-      @include calc(left, "50% - 12.5px");
-      transform: translate(-50%, -50%);
+    .quote-text {
+      transform: skew(-10deg, 0deg);
     }
   }
+}
 
-  h5 {
-    color: $light;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0.96px;
-    text-transform: uppercase;
-  }
+.quote-item-reverse {
+  @extend .quote-item;
+  flex-direction: row-reverse;
 
-  span {
-    color: #aaaaaa;
-    font-size: 12px;
+  .quote-block {
+    margin: 10px -80px 10px 0;
+    padding: 10px 85px 10px 25px;
   }
 }
 
-.history-hex {
-  display: block;
-  position: relative;
-  width: 66px;
-  height: 38.11px;
-  background-color: #293342;
-  margin: 19.05px 0;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    border-left: 33px solid transparent;
-    border-right: 33px solid transparent;
-  }
-
-  &::before {
-    bottom: 100%;
-    border-bottom: 19.05px solid #293342;
-  }
-
-  &::after {
-    top: 100%;
-    width: 0;
-    border-top: 19.05px solid #293342;
-  }
+.margin-bottom-quote {
+  margin-bottom: 100px;
 }
 
 // Service hex

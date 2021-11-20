@@ -174,7 +174,9 @@ label {
 .relative {
   position: relative;
 }
-
+.secondary{
+  color: $secondary-color;
+}
 .primary,
 .link:hover {
   color: $primary-color;

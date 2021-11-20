@@ -8,45 +8,13 @@
 		$('#composer-pfp').attr('src', $(this).attr('data-image-src'));
 	});
 
-	$(".history-scroller").niceScroll({
-		cursorwidth: "10px",
-		background: "#0d1015",
-		cursorborder: "0",
-		cursorborderradius: "0",
-		autohidemode: false,
-		zindex: 5
-	});
+	let sound = new Audio();
 
-	// testimonial-slider
-	$('.testimonials').slick({
-		dots: true,
-		infinite: true,
-		speed: 300,
-		arrows: false,
-		adaptiveHeight: true,
-
-		slidesToShow: 2,
-		slidesToScroll: 1,
-		responsive: [
-			{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 2
-				}
-			},
-			{
-				breakpoint: 992,
-				settings: {
-					slidesToShow: 1
-				}
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					slidesToShow: 1
-				}
-			}
-		]
+	$('.play-quote').on('click', function () {
+		sound.pause();
+		sound = new Audio($(this).attr("data-src"));
+		sound.play();
+		sound.volume = 0.5
 	});
 
 	animatedProgressBar();
