@@ -5,7 +5,6 @@ var sass = require('gulp-sass')(require('sass'));
 var sourcemaps = require('gulp-sourcemaps');
 var fileinclude = require('gulp-file-include');
 var autoprefixer = require('gulp-autoprefixer');
-var runSequence = require('run-sequence');
 var bs = require('browser-sync').create();
 var rimraf = require('rimraf');
 
@@ -18,7 +17,8 @@ var path = {
 		plugins: 'source/plugins/**/*.*',
 		js: 'source/js/*.js',
 		scss: 'source/scss/**/*.scss',
-		images: 'source/images/**/*.+(png|jpg|gif|svg)'
+		images: 'source/images/**/*.+(png|jpg|gif|svg)',
+		sound: 'source/sound/**/*.+(mp3)'
 	},
 	build: {
 		dirDev: 'theme/'
@@ -68,6 +68,14 @@ function images() {
 		}));
 };
 
+function sound() {
+	return gulp.src(path.src.sound)
+		.pipe(gulp.dest(path.build.dirDev + 'sound/'))
+		.pipe(bs.reload({
+			stream: true
+		}));
+};
+
 // Plugins
 function plugins() {
 	return gulp.src(path.src.plugins)
@@ -95,6 +103,7 @@ function watch() {
 	gulp.watch(path.src.scss, scss);
 	gulp.watch(path.src.js, js);
 	gulp.watch(path.src.images, images);
+	gulp.watch(path.src.sound, sound);
 	gulp.watch(path.src.plugins, plugins);
 };
 
@@ -103,6 +112,7 @@ exports.default = gulp.series(clean, gulp.parallel(
 	js,
 	scss,
 	images,
+	sound,
 	plugins,
 	others,
 	watch, function () {
@@ -119,6 +129,7 @@ exports.build = gulp.series(clean, gulp.parallel(
 	js,
 	scss,
 	images,
+	sound,
 	plugins,
 	others
 	)
