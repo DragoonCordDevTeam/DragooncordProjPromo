@@ -304,6 +304,7 @@ FACEBOOK: https://www.facebook.com/themefisher
   }
 
   .quote-block {
+    position: relative;
     display: flex;
     align-items: center;
     padding: 10px 25px 10px 85px;
@@ -319,6 +320,20 @@ FACEBOOK: https://www.facebook.com/themefisher
     .quote-text {
       transform: skew(-10deg, 0deg);
     }
+
+    .quote-credit {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      font-size: 8pt;
+      font-weight: bold;
+      color: $secondary-color;
+      transform: skew(-10deg, 0deg);
+
+      a {
+        color: white;
+      }
+    }
   }
 }
 
@@ -329,6 +344,10 @@ FACEBOOK: https://www.facebook.com/themefisher
   .quote-block {
     margin: 10px -80px 10px 0;
     padding: 10px 85px 10px 25px;
+
+    .quote-credit {
+      right: 90px;
+    }
   }
 }
 
