@@ -511,10 +511,20 @@ FACEBOOK: https://www.facebook.com/themefisher
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 
   img {
     object-fit: contain;
+  }
+}
+
+.general-credits {
+  margin-bottom: 100px;
+  width: 100%;
+  .credits-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 
