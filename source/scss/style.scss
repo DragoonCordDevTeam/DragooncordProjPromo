@@ -355,6 +355,20 @@ FACEBOOK: https://www.facebook.com/themefisher
   margin-bottom: 100px;
 }
 
+// Dragoon artwork
+//--------------------------------------
+
+.artwork-title {
+  width: 100%;
+  text-align: center;
+  margin: 25px 0 25px;
+}
+
+.dragoon-artwork {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
 // Service hex
 //--------------------------------------
 .service-hex {
@@ -497,152 +511,21 @@ FACEBOOK: https://www.facebook.com/themefisher
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 
   img {
     object-fit: contain;
   }
 }
 
-/* =================================== */
-/*  Color Switcher
-/* =================================== */
-.preview-wrapper {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-right: 0;
-  color: #333;
-  height: 150px;
-  right: 0;
-  position: fixed;
-  top: 100px;
-  width: 260px;
-  z-index: 1200;
-  -webkit-transition: all 0.4s ease-in-out 0s;
-  -moz-transition: all 0.4s ease-in-out 0s;
-  -o-transition: all 0.4s ease-in-out 0s;
-  transition: all 0.4s ease-in-out 0s;
-  transform: translateX(100%);
-}
-
-.preview-wrapper.extend {
-  -webkit-transform: translateX(0px);
-  -moz-transform: translateX(0px);
-  -ms-transform: translateX(0px);
-  -o-transform: translateX(0px);
-  transform: translateX(0px);
-}
-
-.switcher-head {
-  color: #333;
-  font-size: 18px;
-  font-weight: 600;
-  height: 46px;
-  line-height: 46px;
-  position: relative;
-}
-
-.switcher-head span {
-  border-bottom: 2px solid #eeeeee;
-  display: block;
-  margin: 0 20px;
-}
-
-.switcher-trigger {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-right: 0;
-  cursor: pointer;
-  font-size: 20px;
-  height: 48px;
-  left: -48px;
-  line-height: 46px;
-  position: absolute;
-  text-align: center;
-  top: -1px;
-  width: 48px;
-}
-
-.switcher-body {
-  background-color: #fff;
-  height: -webkit-calc(100% - 50px);
-  height: calc(100% - 50px);
-  left: 0;
-  padding: 20px;
-  position: fixed;
-  right: 0;
-  top: 47px;
-  outline: none;
-}
-
-.switcher-body h4 {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.switcher-body select {
-  border: 1px solid #e5e5e5;
-  height: 40px;
-  margin-bottom: 20px;
+.general-credits {
+  margin-bottom: 100px;
   width: 100%;
-  -webklit--appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.color-options {
-  margin-bottom: 10px;
-  padding: 0;
-}
-
-.color-options li {
-  display: inline-block;
-  background-color: #e6ae03;
-  height: 30px;
-  margin-bottom: 10px;
-  margin-right: 6px;
-  text-indent: -9999em;
-  width: 30px;
-  cursor: pointer;
-}
-
-.color-options li.c0 {
-  background-color: #FA6862;
-}
-
-.color-options li.c1 {
-  background-color: #02B7CE;
-}
-
-.color-options li.c2 {
-  background-color: #86A438;
-}
-
-.color-options li.c3 {
-  background-color: #F3A36D;
-}
-
-.pattern-options li {
-  font-family: "Roboto", sans-serif;
-  border: 1px solid #cccccc;
-  cursor: pointer;
-  float: left;
-  height: 40px;
-  margin: 0 10px 10px 0;
-  text-transform: capitalize;
-  width: 50px;
-}
-
-.pattern-options li:last-child {
-  border: 0 none;
-  height: auto;
-  padding-top: 8px;
-  width: auto;
-}
-
-.pattern-options li img {
-  width: 100%;
-  height: 100%;
+  .credits-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 /*------------------------------------------------
