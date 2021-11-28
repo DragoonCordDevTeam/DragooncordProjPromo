@@ -135,17 +135,22 @@
         @include transform(translate(-50%, -50%));
     }
     .icon {
-        display: block;
+        display: flex;
+        justify-content: center;
         font-size: 36px;
         line-height: 30px;
         margin-bottom: 11px;
+        i:before{
+            margin: 0;
+            width: auto;
+        }
     }
     .title {
         display: block;
         font-family: $open-sans;
         font-size: 14px;
         letter-spacing: 1px;
-        line-height: 24px;
+        line-height: 18px;
         text-transform: uppercase;
     }
     svg {
