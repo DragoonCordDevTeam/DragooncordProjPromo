@@ -17,6 +17,26 @@
 		sound.volume = 0.5
 	});
 
+	$.getJSON("js/messages.json", function (data) {
+		let items = data;
+		for (let i = items.length - 1; i > 0; i--) {
+			let j = Math.floor(Math.random() * (i + 1));
+			[items[i], items[j]] = [items[j], items[i]]
+		}
+		items = items.map((item, i) => `<div class="postcard" 
+style="transform: rotate(${Math.floor(Math.random() * 10 - 5)}deg); 
+z-index: ${items.length - i}">
+<div class="message-text">${item["Birthday message"]}</div>
+<div class="message-name">-${item["Nickname"]}</div>
+<img class="stamp" src="images/stamps/${Math.ceil(Math.random() * 9)}.png">
+</div>`);
+
+		$("<div/>", {
+			"class": "message-list",
+			html: items.join("")
+		}).appendTo($("#message-board"));
+	});
+
 	animatedProgressBar();
 	windowHieght();
 	previewPannel();

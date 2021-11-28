@@ -15,7 +15,7 @@ var path = {
 		htminc: 'source/partials/**/*.htm',
 		incdir: 'source/partials/',
 		plugins: 'source/plugins/**/*.*',
-		js: 'source/js/*.js',
+		js: 'source/js/*.+(js|json)',
 		scss: 'source/scss/**/*.scss',
 		images: 'source/images/**/*.+(png|jpg|gif|svg)',
 		sound: 'source/sound/**/*.+(mp3)'
