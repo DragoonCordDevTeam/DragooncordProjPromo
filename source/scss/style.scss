@@ -242,6 +242,7 @@ html::-webkit-scrollbar-thumb {
   .messages-scroll {
     display: flex;
     justify-content: center;
+    padding-top: 30px;
     width: 100%;
     max-height: calc(100vh - 280px);
     overflow-y: scroll;
