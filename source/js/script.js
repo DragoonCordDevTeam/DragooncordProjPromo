@@ -8,6 +8,11 @@
 		$('#composer-pfp').attr('src', $(this).attr('data-image-src'));
 	});
 
+	$('.play-video').on('click', function () {
+		$('#YTPlayer').attr('src', $(this).attr("data-src"));
+		$('#warning').text($(this).attr("data-warning"));
+	});
+
 	let sound = new Audio();
 
 	$('.play-quote').on('click', function () {
